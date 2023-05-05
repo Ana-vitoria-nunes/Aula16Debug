@@ -26,11 +26,11 @@ public class Main {
 
         System.out.println("=========================================================");
         System.out.println("Exemplo de mostrar lista de quantidade de nomes com funções");
+
+
         System.out.println("=========================================================");
         List<String> listaNomesComQuantidade = mostrarNomesComPosicao(retornarListaNumeros());
         System.out.println("Exemplo de array = " + listaNomesComQuantidade);
-
-
     }
 
     public static double calcularAreaRetanguloComInputUsuario() {
@@ -47,20 +47,13 @@ public class Main {
 
         return areaRetangulo;
     }
-
-    public static void calcularAreaRetangulo(double base, double altura) {
-        double areaRetangulo = base * altura;
-        System.out.println("O valor da área é de " + areaRetangulo);
-    }
-
     public static void calcularSomaAreas() {
-        //Exemplo de uso do retorno de outra função
+
         double somaAreas = calcularAreaRetanguloComInputUsuario() + calcularAreaRetanguloComInputUsuario();
         System.out.println("A somatoria da area total é de: " + somaAreas);
     }
-
     public static List<Integer> retornarListaNumeros() {
-        List<Integer> listaNumero = new ArrayList<>(3);
+        List<Integer> listaNumero = new ArrayList<>();
         listaNumero.add(1);
         listaNumero.add(2);
         listaNumero.add(3);
@@ -72,7 +65,6 @@ public class Main {
             System.out.println(numeros.get(i));
         }
     }
-
     public static List<String> mostrarNomesComPosicao(List<Integer> quantidade) {
         List<String> nomesExibir = new ArrayList<>();
         for (int i = 0; i < quantidade.size(); i++) {
@@ -80,19 +72,5 @@ public class Main {
             System.out.println(nomesExibir.get(i));
         }
         return nomesExibir;
-    }
-
-    public static List<String> retornarListaNomes() {
-        Scanner scanner=new Scanner(System.in);
-        System.out.println("Digite a capacidade: ");
-        int capacidade = scanner.nextInt();
-
-        List<String> listaNomes = new ArrayList<>();
-
-        for (int i = 0; i <=capacidade; i++) {
-            System.out.println("Digite um nome: ");
-            listaNomes.add(scanner.nextLine());
-        }
-        return listaNomes;
     }
 }
